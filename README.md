@@ -8,3 +8,4 @@
 - JavaScript
 
 **Resources Used:**  
+- Used this [freeCodeCamp](https://www.freecodecamp.org/news/link-javascript-to-html-with-the-src/) page to remind me how to grab a JS file in another directory that isn't where my `index.html` file is.
