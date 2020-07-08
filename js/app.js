@@ -60,4 +60,33 @@ if(publishBook === 'y' || publishBook === 'yes') {
   alert('Please enter yes or no');
 }
 
+
+// add 6th Q that takes numeric input to guess a random number
+var randomNum = Math.floor(Math.random() * 11);
+var userGuess = prompt('Guess a number between 0 and 10');
+// alerts if guess is too high or too low
+if(userGuess > randomNum) {
+  console.log('Your guess is too high - try again');
+} else if(userGuess < randomNum) {
+  console.log('Your guess is too low - try again');
+} else if(userGuess === randomNum){
+  console.log('You got it! The number was: ' + randomNum + '!');
+} 
+// gives user exactly 4 chances to guess
+for(var i = 0; i < 5; i++){
+
+}
+// after all attempts are done, display correct answer
+console.log('The correct answer was: ' + randomNum);
+
+
+// add 7th Q has array (multiple) answers
+// git 6 attempts to guess
+// will end once guesses correct answer or run out of attempts
+// display all possible correct answers to user
+
+// collect the score of correct to keep track of how many of the 7 Q's they got right IF statement
+
+
+
 alert('Thanks for taking the time to try and get to know me, ' + userName + ':)');
