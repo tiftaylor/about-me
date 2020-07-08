@@ -9,3 +9,4 @@
 
 **Resources Used:**  
 - Used this [freeCodeCamp](https://www.freecodecamp.org/news/link-javascript-to-html-with-the-src/) page to remind me how to grab a JS file in another directory that isn't where my `index.html` file is.
+- Used this [CSS Tricks](https://css-tricks.com/almanac/properties/l/list-style/) page to remind me how to do the manual styling of list items to overwrite the reset.css stripping.
