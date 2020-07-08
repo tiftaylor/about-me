@@ -85,9 +85,18 @@ alert('The computer chose the random number: ' + randomNum);
 
 
 // add 7th Q has array (multiple) answers
-// git 6 attempts to guess
-// will end once guesses correct answer or run out of attempts
-// display all possible correct answers to user
+// get 6 attempts to guess + display all possible correct answers to user
+var faveColorsArr = [green, white];
+
+for(var i = 0; i <= 6; i++){
+  var userColorGuess = prompt('Guess my favorite color(s) from this list?  Please only enter 1 color in the answer box: Red / Orange / Yellow / Green / Blue / Purple / White / Black').toLowerCase();
+  if(userColorGuess === faveColorsArr[0] || faveColorsArr[1]){
+    alert('Wow! good guess!');
+    break;
+  } else if(userColorGuess !== faveColorsArr[0] || faveColorsArr[1]) {
+    alert('Nah, keep trying...');
+  }
+}
 
 // collect the score of correct to keep track of how many of the 7 Q's they got right IF statement
 
