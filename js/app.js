@@ -4,7 +4,7 @@
 var userName = prompt('Hello, visitor! What is your name?');
 alert('Welcome ' + userName + '! I\'m going to ask you a series of questions about Tif Taylor. Please use \'yes\' or \'no\' when answering.');
 
-// 5 Question Series | Yes/No
+// 5 Question Series | Yes/No | // Q-1
 var currentCity = prompt('Is Tif based in Seattle? (yes or no)').toLowerCase();
 if(currentCity === 'y' || currentCity === 'yes') {
   alert('Correct! Seattle is lovely! (usually...)');
@@ -16,6 +16,7 @@ if(currentCity === 'y' || currentCity === 'yes') {
   alert('Please enter yes or no');
 }
 
+// Q-2
 var doDance = prompt('Does Tif social dance? (yes or no)').toLowerCase();
 if(doDance === 'y' || doDance === 'yes') {
   alert('I sure do! I swing, blues and fusion dance!');
@@ -27,6 +28,7 @@ if(doDance === 'y' || doDance === 'yes') {
   alert('Please enter yes or no');
 }
 
+// Q-3
 var philoDegree = prompt('Does Tif have a degree in Philosophy? (yes or no)').toLowerCase();
 if(philoDegree === 'y' || philoDegree === 'yes') {
   alert('Yeah...I am in a constant state of existentialism, LOL');
@@ -38,6 +40,7 @@ if(philoDegree === 'y' || philoDegree === 'yes') {
   alert('Please enter yes or no');
 }
 
+// Q-4
 var ownCat = prompt('Does Tif own a cat? (yes or no)').toLowerCase();
 if(ownCat === 'y' || ownCat === 'yes') {
   alert('Heck no fren! Doggos only plz.');
@@ -49,6 +52,7 @@ if(ownCat === 'y' || ownCat === 'yes') {
   alert('Please enter yes or no');
 }
 
+// Q-5
 var publishBook = prompt('Does Tif want to write and publish a book? (yes or no)').toLowerCase();
 if(publishBook === 'y' || publishBook === 'yes') {
   alert('Correct! I do, but it\'s time consuming!');
@@ -60,24 +64,24 @@ if(publishBook === 'y' || publishBook === 'yes') {
   alert('Please enter yes or no');
 }
 
-
-// add 6th Q that takes numeric input to guess a random number
-var randomNum = Math.floor(Math.random() * 11);
-var userGuess = prompt('Guess a number between 0 and 10');
-// alerts if guess is too high or too low
-if(userGuess > randomNum) {
-  console.log('Your guess is too high - try again');
-} else if(userGuess < randomNum) {
-  console.log('Your guess is too low - try again');
-} else if(userGuess === randomNum){
-  console.log('You got it! The number was: ' + randomNum + '!');
-} 
-// gives user exactly 4 chances to guess
-for(var i = 0; i < 5; i++){
-
+// Q-6 | Guessing Game
+var randomNum = Math.floor(Math.random() * 11); 
+var attempts = 4;
+// console.log(randomNum);
+for(var i = 1; i <= attempts; i++){
+  var userGuessStr = prompt('only for loop prompt: Guess a number between 0 and 10');
+  var userGuessNum = parseInt(userGuessStr);
+  if(userGuessNum > randomNum) {
+    alert('Your guess is too high - try again');
+    // console.log('high input: ' + userGuessNum);
+  } else if(userGuessNum < randomNum) {
+    alert('Your guess is too low - try again');
+    // console.log('low input: ' + userGuessNum);
+  } else if(userGuessNum === randomNum){ 
+    alert('You got it! The number was: ' + randomNum + '!');
+  }
 }
-// after all attempts are done, display correct answer
-console.log('The correct answer was: ' + randomNum);
+alert('The computer chose the random number: ' + randomNum);
 
 
 // add 7th Q has array (multiple) answers
