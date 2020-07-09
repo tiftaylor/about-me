@@ -3,8 +3,13 @@
 var score = 0;
 
 // What is userName + Custom Greeting passing in userName
-var userName = prompt('Hello, visitor! What is your name?');
+// Refactoring to function
+function welcomeUser(){
+  var userName = prompt('Hello, visitor! What is your name?');
 alert('Welcome ' + userName + '! I\'m going to ask you a series of questions about Tif Taylor. Please use \'yes\' or \'no\' when answering.');
+};
+
+welcomeUser();
 
 // 5 Question Series | Yes/No | // Q-1
 // Refactoring to functions
@@ -98,7 +103,7 @@ doesTifWantToPublish();
 
 // Q-6 | Guessing Game
 // Refactoring to functions
-function playGuessingGame(){
+function playNumberGame(){
   var randomNum = Math.floor(Math.random() * 11); 
   var attempts = 4;
   // console.log(randomNum);
@@ -120,23 +125,28 @@ function playGuessingGame(){
   alert('The computer chose the random number: ' + randomNum);
 };
 
-playGuessingGame();
+playNumberGame();
 
 // add 7th Q has array (multiple) answers + get 6 attempts to guess + display all possible correct answers to user
-var faveColorsArr = ['green', 'white'];
+// Refactoring to function
+function playColorGame(){
+  var faveColorsArr = ['green', 'white'];
 
-for(var i = 0; i < 6; i++){
-  // console.log(faveColorsArr);
-  var userColorGuess = prompt('Guess my favorite color(s) from this list?  Please only enter 1 color in the answer box: Red / Orange / Yellow / Green / Blue / Purple / White / Black').toLowerCase();
-  if(userColorGuess === faveColorsArr[0] && faveColorsArr[1]){
-    score ++;
-    alert('Wow! good guess!');
-    break;
-  } else if(userColorGuess !== faveColorsArr[0] || faveColorsArr[1]) {
-    alert('Nah, keep trying...');
+  for(var i = 0; i < 6; i++){
+    // console.log(faveColorsArr);
+    var userColorGuess = prompt('Guess my favorite color(s) from this list?  Please only enter 1 color in the answer box: Red / Orange / Yellow / Green / Blue / Purple / White / Black').toLowerCase();
+    if(userColorGuess === faveColorsArr[0] && faveColorsArr[1]){
+      score ++;
+      alert('Wow! good guess!');
+      break;
+    } else if(userColorGuess !== faveColorsArr[0] || faveColorsArr[1]) {
+      alert('Nah, keep trying...');
+    }
   }
-}
-alert('My fave colors are green and white');
+  alert('My fave colors are green and white');
+};
+
+playColorGame();
 
 // collect the score of correct to keep track of how many of the 7 Q's they got right and display score
 alert('Thanks for taking the time to try and get to know me, ' + userName + '! You got ' + score + ' of 7 questions correct!');
