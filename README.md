@@ -13,3 +13,4 @@
 - [w3schools](https://www.w3schools.com/js/js_random.asp) Used page to learn how to do random numbers for the JS file
 - [stackoverflow](https://stackoverflow.com/questions/17907455/how-to-get-numeric-value-from-a-prompt-box) Used page to figure out `parseInt` for my prompt string conversion for logical comparison in Guessing Game
 - Utilized TA Alistair Blake during Lab 03 for correcting the input capture in my for loop
+- [CSS Tricks](https://css-tricks.com/almanac/properties/b/box-shadow/) Used this page to help me add a box-shadow to my image

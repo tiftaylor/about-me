@@ -1,28 +1,69 @@
 body {
   background-color: lightblue;
+  font-family: sans-serif;
+}
+
+main {
+  width: 960px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgb(230, 241, 244);
 }
 
 body h1 {
   font-weight: bold;
-  font-size: xx-large;
-  width: 50%;
+  font-size: 4rem;
   text-align: center;
   margin: 30px;
 }
 
 div h3 {
   font-weight: bold;
+  font-size: 1.5rem;
   padding-bottom: 10px;
 }
 
-div {
-  width: 50%;
+#bio {
   text-align: left;
-  margin: 5px;
-  padding: 20px;
+  width: 60%;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+#bio p {
+  padding-right: 15px;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  line-height: 1.7em;
+  padding-left: 20px;
+}
+
+img {
+  float: right;
+  margin-top: 50px;
+  box-shadow: 5px 3px 5px 5px lightgrey;
+}
+
+#ed {
+  margin-bottom: 40px;
+}
+
+#job {
+  margin-bottom: 40px;
+}
+
+#goals {
+  margin-bottom: 40px;
 }
 
 div ul {
   list-style: square outside none;
-  padding-left: 35px;
+  padding-left: 20px;
+  line-height: 1.3em;
+}
+
+div ol {
+  list-style: square outside none;
+  padding-left: 20px;
+  line-height: 1.3em;
 }
