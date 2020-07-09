@@ -61,17 +61,22 @@ function didTifStudyPhilo(){
 didTifStudyPhilo();
 
 // Q-4
-var ownCat = prompt('Does Tif own a cat? (yes or no)').toLowerCase();
-if(ownCat === 'y' || ownCat === 'yes') {
-  alert('Heck no fren! Doggos only plz.');
-  // console.log('Does Tif own a cat? ' + ownCat + ' is incorrect');
-} else if(ownCat === 'n' || ownCat === 'no') {
-  score ++;
-  alert('Doin me an excite friendo! Cats are lame');
-  // console.log('Does Tif own a cat? ' + ownCat + ' is correct');
-} else {
-  alert('Please enter yes or no');
-}
+// Refactoring to functions
+function doesOwnCat(){
+  var ownCat = prompt('Does Tif own a cat? (yes or no)').toLowerCase();
+  if(ownCat === 'y' || ownCat === 'yes') {
+    alert('Heck no fren! Doggos only plz.');
+    // console.log('Does Tif own a cat? ' + ownCat + ' is incorrect');
+  } else if(ownCat === 'n' || ownCat === 'no') {
+    score ++;
+    alert('Doin me an excite friendo! Cats are lame');
+    // console.log('Does Tif own a cat? ' + ownCat + ' is correct');
+  } else {
+    alert('Please enter yes or no');
+  }
+};
+
+doesOwnCat();
 
 // Q-5
 var publishBook = prompt('Does Tif want to write and publish a book? (yes or no)').toLowerCase();
