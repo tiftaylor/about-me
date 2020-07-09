@@ -43,17 +43,22 @@ function doesTifDance(){
 doesTifDance();
 
 // Q-3
-var philoDegree = prompt('Does Tif have a degree in Philosophy? (yes or no)').toLowerCase();
-if(philoDegree === 'y' || philoDegree === 'yes') {
-  score ++;
-  alert('Yeah...I am in a constant state of existentialism, LOL');
-  // console.log('Does Tif have a degree in Philosophy? ' + philoDegree + ' is correct');
-} else if(philoDegree === 'n' || philoDegree === 'no') {
-  alert('Sadly, you\'re wrong. I majored in Philosophy of the Mind');
-  // console.log('Does Tif have a degree in Philosophy? ' + philoDegree + ' is incorrect');
-} else {
-  alert('Please enter yes or no');
-}
+// Refactoring to functions
+function didTifStudyPhilo(){
+  var philoDegree = prompt('Does Tif have a degree in Philosophy? (yes or no)').toLowerCase();
+  if(philoDegree === 'y' || philoDegree === 'yes') {
+    score ++;
+    alert('Yeah...I am in a constant state of existentialism, LOL');
+    // console.log('Does Tif have a degree in Philosophy? ' + philoDegree + ' is correct');
+  } else if(philoDegree === 'n' || philoDegree === 'no') {
+    alert('Sadly, you\'re wrong. I majored in Philosophy of the Mind');
+    // console.log('Does Tif have a degree in Philosophy? ' + philoDegree + ' is incorrect');
+  } else {
+    alert('Please enter yes or no');
+  }
+};
+
+didTifStudyPhilo();
 
 // Q-4
 var ownCat = prompt('Does Tif own a cat? (yes or no)').toLowerCase();
