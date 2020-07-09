@@ -79,17 +79,22 @@ function doesOwnCat(){
 doesOwnCat();
 
 // Q-5
-var publishBook = prompt('Does Tif want to write and publish a book? (yes or no)').toLowerCase();
-if(publishBook === 'y' || publishBook === 'yes') {
-  score ++;
-  alert('Correct! I do, but it\'s time consuming!');
-  // console.log('Does Tif want to write and publish a book? ' + publishBook + ' is correct');
-} else if(publishBook === 'n' || publishBook === 'no') {
-  alert('Incorrect, my friend. I aspire to be remembered forever!');
-  // console.log('Does Tif want to write and publish a book? ' + publishBook + ' is incorrect');
-} else {
-  alert('Please enter yes or no');
-}
+// Refactoring to functions
+function doesTifWantToPublish(){
+  var publishBook = prompt('Does Tif want to write and publish a book? (yes or no)').toLowerCase();
+  if(publishBook === 'y' || publishBook === 'yes') {
+    score ++;
+    alert('Correct! I do, but it\'s time consuming!');
+    // console.log('Does Tif want to write and publish a book? ' + publishBook + ' is correct');
+  } else if(publishBook === 'n' || publishBook === 'no') {
+    alert('Incorrect, my friend. I aspire to be remembered forever!');
+    // console.log('Does Tif want to write and publish a book? ' + publishBook + ' is incorrect');
+  } else {
+    alert('Please enter yes or no');
+  }
+};
+
+doesTifWantToPublish();
 
 // Q-6 | Guessing Game
 var randomNum = Math.floor(Math.random() * 11); 
