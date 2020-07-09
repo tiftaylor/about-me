@@ -97,25 +97,30 @@ function doesTifWantToPublish(){
 doesTifWantToPublish();
 
 // Q-6 | Guessing Game
-var randomNum = Math.floor(Math.random() * 11); 
-var attempts = 4;
-// console.log(randomNum);
-for(var i = 1; i <= attempts; i++){
-  var userGuessStr = prompt('Guess a number between 0 and 10');
-  var userGuessNum = parseInt(userGuessStr);
-  if(userGuessNum > randomNum) {
-    alert('Your guess is too high - try again');
-    // console.log('high input: ' + userGuessNum);
-  } else if(userGuessNum < randomNum) {
-    alert('Your guess is too low - try again');
-    // console.log('low input: ' + userGuessNum);
-  } else if(userGuessNum === randomNum){ 
-    score ++;
-    alert('You got it! The number was: ' + randomNum + '!');
-    break;
+// Refactoring to functions
+function playGuessingGame(){
+  var randomNum = Math.floor(Math.random() * 11); 
+  var attempts = 4;
+  // console.log(randomNum);
+  for(var i = 1; i <= attempts; i++){
+    var userGuessStr = prompt('Guess a number between 0 and 10');
+    var userGuessNum = parseInt(userGuessStr);
+    if(userGuessNum > randomNum) {
+      alert('Your guess is too high - try again');
+      // console.log('high input: ' + userGuessNum);
+    } else if(userGuessNum < randomNum) {
+      alert('Your guess is too low - try again');
+      // console.log('low input: ' + userGuessNum);
+    } else if(userGuessNum === randomNum){ 
+      score ++;
+      alert('You got it! The number was: ' + randomNum + '!');
+      break;
+    }
   }
-}
-alert('The computer chose the random number: ' + randomNum);
+  alert('The computer chose the random number: ' + randomNum);
+};
+
+playGuessingGame();
 
 // add 7th Q has array (multiple) answers + get 6 attempts to guess + display all possible correct answers to user
 var faveColorsArr = ['green', 'white'];
