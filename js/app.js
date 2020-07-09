@@ -95,7 +95,7 @@ alert('The computer chose the random number: ' + randomNum);
 // add 7th Q has array (multiple) answers + get 6 attempts to guess + display all possible correct answers to user
 var faveColorsArr = ['green', 'white'];
 
-for(var i = 0; i <= 6; i++){
+for(var i = 0; i < 6; i++){
   // console.log(faveColorsArr);
   var userColorGuess = prompt('Guess my favorite color(s) from this list?  Please only enter 1 color in the answer box: Red / Orange / Yellow / Green / Blue / Purple / White / Black').toLowerCase();
   if(userColorGuess === faveColorsArr[0] && faveColorsArr[1]){
