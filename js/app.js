@@ -7,17 +7,22 @@ var userName = prompt('Hello, visitor! What is your name?');
 alert('Welcome ' + userName + '! I\'m going to ask you a series of questions about Tif Taylor. Please use \'yes\' or \'no\' when answering.');
 
 // 5 Question Series | Yes/No | // Q-1
-var currentCity = prompt('Is Tif based in Seattle? (yes or no)').toLowerCase();
-if(currentCity === 'y' || currentCity === 'yes') {
-  score ++;
-  alert('Correct! Seattle is lovely! (usually...)');
-  // console.log('Is Tif based in Seattle? ' + currentCity + ' is correct');
-} else if(currentCity === 'n' || currentCity === 'no') {
-  alert('Nope...try again.');
-  // console.log('Is Tif based in Seattle? ' + currentCity + ' is incorrect');
-} else {
-  alert('Please enter yes or no');
-}
+// Refactoring to functions
+function isCitySeattle(){
+  var currentCity = prompt('Is Tif based in Seattle? (yes or no)').toLowerCase();
+  if(currentCity === 'y' || currentCity === 'yes') {
+    score ++;
+    alert('Correct! Seattle is lovely! (usually...)');
+    // console.log('Is Tif based in Seattle? ' + currentCity + ' is correct');
+  } else if(currentCity === 'n' || currentCity === 'no') {
+    alert('Nope...try again.');
+    // console.log('Is Tif based in Seattle? ' + currentCity + ' is incorrect');
+  } else {
+    alert('Please enter yes or no');
+  }
+};
+
+isCitySeattle();
 
 // Q-2
 var doDance = prompt('Does Tif social dance? (yes or no)').toLowerCase();
