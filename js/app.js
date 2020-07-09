@@ -25,17 +25,22 @@ function isCitySeattle(){
 isCitySeattle();
 
 // Q-2
-var doDance = prompt('Does Tif social dance? (yes or no)').toLowerCase();
-if(doDance === 'y' || doDance === 'yes') {
-  score ++;
-  alert('I sure do! I swing, blues and fusion dance!');
-  // console.log('Does Tif social dance? ' + doDance + ' is correct');
-} else if(doDance === 'n' || doDance === 'no') {
-  alert('Incorrect - It may not seem like it on Zoom but I got mooooves!');
-  // console.log('Does Tif social dance? ' + doDance + ' is incorrect');
-} else {
-  alert('Please enter yes or no');
-}
+// Refactoring to functions
+function doesTifDance(){
+  var doDance = prompt('Does Tif social dance? (yes or no)').toLowerCase();
+  if(doDance === 'y' || doDance === 'yes') {
+    score ++;
+    alert('I sure do! I swing, blues and fusion dance!');
+    // console.log('Does Tif social dance? ' + doDance + ' is correct');
+  } else if(doDance === 'n' || doDance === 'no') {
+    alert('Incorrect - It may not seem like it on Zoom but I got mooooves!');
+    // console.log('Does Tif social dance? ' + doDance + ' is incorrect');
+  } else {
+    alert('Please enter yes or no');
+  }
+};
+
+doesTifDance();
 
 // Q-3
 var philoDegree = prompt('Does Tif have a degree in Philosophy? (yes or no)').toLowerCase();
