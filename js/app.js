@@ -1,12 +1,13 @@
 'use strict';
 
+var userName = prompt('Hello, visitor! What is your name?');
 var score = 0;
 
 // What is userName + Custom Greeting passing in userName
 // Refactoring to function
 function welcomeUser(){
-  var userName = prompt('Hello, visitor! What is your name?');
-alert('Welcome ' + userName + '! I\'m going to ask you a series of questions about Tif Taylor. Please use \'yes\' or \'no\' when answering.');
+  userName;
+  alert('Welcome ' + userName + '! I\'m going to ask you a series of questions about Tif Taylor. Please use \'yes\' or \'no\' when answering.');
 };
 
 welcomeUser();
